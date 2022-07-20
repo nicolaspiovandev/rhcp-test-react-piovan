@@ -1,18 +1,32 @@
-//UpperCamelCase
+
 import './NavBar.scss'
 
 const NavBar = () => {
-    return(
-        <div>
-            <h1>Logo</h1>
-        
-            <ul>
-            <li><button>Inicio</button></li>
-            <li><button>Productos</button></li>
-            <li><button>About us</button></li>
-            <li><button>Contacto</button></li>
-            </ul>
-        </div>
+    return (
+        <header className="row header">
+            <nav className="col navbar">
+                <div className='title'>
+                    <h1>RHCP</h1>
+                </div>
+                <ul className='navbar-items'>
+                    <li>
+                        <a>Inicio</a>
+                    </li>
+                    <li>
+                        <a>Productos</a>
+                    </li>
+                    <li>
+                        <a>Servicios</a>
+                    </li>
+                    <li>
+                        <a>Nosotros</a>
+                    </li>
+                    <li>
+                        <a>Contacto</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
     )
 }
 
