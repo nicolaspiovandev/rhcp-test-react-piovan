@@ -1,0 +1,13 @@
+.cart{
+    display: flex;
+    align-items: center;
+    color:rgba(255, 0, 0, 0.671);
+    p {
+        color:rgba(255, 0, 0, 0.671);
+
+            &:hover {
+                background-color: rgb(233, 127, 127);
+            }
+    }
+    
+}

@@ -16,23 +16,27 @@ const ItemProduct = ({ data }) => {
     }
 
 
-    useEffect( () => {
+    useEffect(() => {
         /* return () => {
             console.log("Ejecuto en fase de update")
         }
         
         /* fetch().then(
             setProduct()
-        ) */ 
-    },[])
+        ) */
+    }, [])
 
 
     return (
         <div className="item-product">
-            <img src={`/assets/${image}`} alt="imagen productos"></img>
-            <p>{title}</p>
-            <span>$ {price}</span>
-            <p>Stock: {stock}</p>
+            <div className='card'>
+                <img src={`/assets/${image}`} alt="imagen productos"></img>
+                <p>{title}</p>
+            </div>
+            <div className='price-stock'>
+                <span>$ {price}</span>
+                <p>Stock: {stock}</p>
+            </div>
             <div className='countProd'>
                 <button onClick={removeNumber}>-</button>
                 <p>{contador}</p>
