@@ -4,6 +4,17 @@ import ItemContainer from './components/ItemContainer/ItemContainer';
 /* import Modal from './components/Modal/Modal'; */
 
 function App() {
+
+  /* CONSUMIR UNA API CON FETCH (GET POR DEFECTO)
+  fetch("URL")
+  .then((response => {
+    return response.json()
+  })
+  .then( (data) => {
+    console.log("informacio que traigo", data)
+  })
+   */
+  
   return (
     <div className="App">
       <header className="App-header">

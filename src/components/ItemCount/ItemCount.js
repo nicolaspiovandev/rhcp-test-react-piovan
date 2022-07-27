@@ -1,30 +1,32 @@
-import { useState, useEffect } from 'react'
-import './ItemProduct.scss'
+import './ItemCount.scss'
+import {useState} from 'react'
 
-const ItemProduct = ({ data }) => {
-    const [contador, setContador] = useState(1)
+const ItemCount = ({ data }) => {
+    const [contador, setContador] = useState(0)
 
     const { title, image, price, stock } = data
 
-
     const addNumber = () => {
-        setContador(contador + 1)
+        if (contador < stock){
+            setContador(contador + 1)
+        }
     }
 
     const removeNumber = () => {
-        setContador(contador - 1)
+        if (contador > 1){
+            setContador(contador - 1)
+        }
     }
 
-
-    useEffect(() => {
-        /* return () => {
-            console.log("Ejecuto en fase de update")
-        }
-        
-        /* fetch().then(
-            setProduct()
-        ) */
-    }, [])
+    /*  useEffect(() => {
+         return () => {
+             console.log("Ejecuto en fase de update")
+         }
+         
+         /* fetch().then(
+             setProduct()
+         )
+     }, []) */
 
 
     return (
@@ -43,6 +45,7 @@ const ItemProduct = ({ data }) => {
                 <button onClick={addNumber}>+</button>
             </div>
             <div className='btn-buy'>
+
                 <button>Comprar!</button>
             </div>
         </div>
@@ -50,4 +53,4 @@ const ItemProduct = ({ data }) => {
 
 }
 
-export default ItemProduct
+export default ItemCount

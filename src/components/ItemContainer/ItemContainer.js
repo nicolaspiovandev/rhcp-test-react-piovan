@@ -1,5 +1,5 @@
 import { useEffect } from "react"
-import ItemProduct from "../ItemProduct/ItemProduct"
+import ItemCount from "../ItemCount/ItemCount"   
 import './ItemContainer.scss'
 
 
@@ -14,7 +14,7 @@ const ItemContainer = ({section}) => {
         title: "STICKER FLEA",
         price: 150,
         image: 'flearhcp.png',
-        stock: 0
+        stock: 13
     }
 
     const logPromise = new Promise ((resolve, reject) =>{
@@ -44,8 +44,8 @@ const ItemContainer = ({section}) => {
     return (
         <div className="list-product">
             <h2>{section}</h2>
-            <ItemProduct data={product1} />
-            <ItemProduct data={product2} />
+            <ItemCount data={product1} />
+            <ItemCount data={product2} />
         </div>
     )
 }
