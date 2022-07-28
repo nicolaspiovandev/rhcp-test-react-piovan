@@ -1,5 +1,5 @@
 import { useEffect } from "react"
-import ItemCount from "../ItemCount/ItemCount"   
+import ItemProduct from "../ItemProduct/ItemProduct"
 import './ItemContainer.scss'
 
 
@@ -44,8 +44,8 @@ const ItemContainer = ({section}) => {
     return (
         <div className="list-product">
             <h2>{section}</h2>
-            <ItemCount data={product1} />
-            <ItemCount data={product2} />
+            <ItemProduct data={product1} />
+            <ItemProduct data={product2} />
         </div>
     )
 }
