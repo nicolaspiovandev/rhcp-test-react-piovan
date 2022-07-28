@@ -28,7 +28,6 @@ const ItemCount = ({ stock }) => {
                 <button onClick={addNumber}>+</button>
             </div>
             <div className='btn-buy'>
-
                 <button>Comprar!</button>
             </div>
         </div>
