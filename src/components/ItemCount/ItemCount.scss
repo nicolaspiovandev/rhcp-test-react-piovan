@@ -6,6 +6,9 @@
     button{
         padding: 10px;
         margin: 10px;
+        border: 1px solid #CCC;
+        background-color:black;
+        color: #CCC;
     }
 }
 
@@ -14,7 +17,12 @@
     justify-content: center;
     height: 50%;
     margin: 15px;
-    
+    button{
+        border: 1px solid #CCC;
+        background-color:black;
+        color: #CCC;
+        font-family:Verdana,Tahoma, sans-serif;
+    }
 }
 
 

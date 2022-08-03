@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import CartWidget from "../CartWidget/CartWidget"
 import './NavBar.scss'
 
@@ -9,11 +10,11 @@ const NavBar = () => {
                     <h1>RHCP</h1>
                 </div>
                 <ul className='navbar-items'>
-                    <li><a>Inicio</a></li>
-                    <li><a>Productos</a></li>
-                    <li><a>Servicios</a></li>
-                    <li><a>Nosotros</a></li>
-                    <li><a>Contacto</a></li>
+                    <Link to="/"><li><button>Inicio</button></li></Link>
+                    <Link to="/productos"><li><button>Productos</button></li></Link>
+                    <Link to=""><li><button>Servicios</button></li></Link>
+                    <Link to=""><li><button>Nosotros</button></li></Link>
+                    <Link to=""><li><button>Contacto</button></li></Link>
                 </ul>
                 <CartWidget></CartWidget>
             </nav>

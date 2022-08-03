@@ -2,6 +2,7 @@ import { useState, useEffect } from "react"
 import './ItemContainer.scss'
 import ItemList from "../ItemList/ItemList"
 import products from "../../utils/products"
+import ItemDetailContainer from "../ItemDetailContainer/ItemDetailContainer"
 
 
 const ItemContainer = ({ section }) => {

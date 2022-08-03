@@ -1,7 +1,11 @@
 import './App.css';
 import NavBar from './components/NavBar/NavBar';
-import ItemContainer from './components/ItemContainer/ItemContainer';
 /* import Modal from './components/Modal/Modal'; */
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import Home from './pages/Home';
+import Products from './pages/Products';
+import Checkout from './pages/Checkout';
+import Detail from './pages/Detail';
 
 function App() {
 
@@ -14,28 +18,32 @@ function App() {
     console.log("informacio que traigo", data)
   })
    */
-  
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <nav className="navbar">
-        <NavBar></NavBar>
-        </nav>
-        <div className="main-container">
-          <h1>Productos</h1>
-          <ItemContainer section="Productos destacados"></ItemContainer>
-          <ItemContainer section="Productos en oferta"></ItemContainer>
-          <ItemContainer section="Productos mas vistos"></ItemContainer>
-        </div>
-      </header>
-      {/* <Modal>
+    <BrowserRouter >
+      <div className="App">
+        <header className="App-header">
+          <nav className="navbar">
+            <NavBar></NavBar>
+          </nav>
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/productos' element={<Products />} />
+            <Route path='/productos/:id' element={<Detail />} />
+            <Route path='/checkout' element={<Checkout />} />
+            <Route path='*' element={<h1>ERROR 404 - PAGINA NO ENCONTRADA</h1>} />
+          </Routes>
+
+        </header>
+        {/* <Modal>
         <h2>Modal de registro</h2>
         <form>
           <input type="text"></input>
           <button>Enviar</button>
         </form>
       </Modal> */}
-    </div>
+      </div>
+    </BrowserRouter>
   );
 }
 
