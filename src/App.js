@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import Products from './pages/Products';
 import Checkout from './pages/Checkout';
 import Detail from './pages/Detail';
+import CartProdiver from './context/CartContext';
 
 function App() {
 
@@ -20,30 +21,31 @@ function App() {
    */
 
   return (
-    <BrowserRouter >
-      <div className="App">
-        <header className="App-header">
-          <nav className="navbar">
-            <NavBar></NavBar>
-          </nav>
-          <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/productos' element={<Products />} />
-            <Route path='/productos/:id' element={<Detail />} />
-            <Route path='/checkout' element={<Checkout />} />
-            <Route path='*' element={<h1>ERROR 404 - PAGINA NO ENCONTRADA</h1>} />
-          </Routes>
-
-        </header>
-        {/* <Modal>
+    <CartProdiver>
+      <BrowserRouter >
+        <div className="App">
+          <header className="App-header">
+            <nav className="navbar">
+              <NavBar></NavBar>
+            </nav>
+            <Routes>
+              <Route path='/' element={<Home />} />
+              <Route path='/productos' element={<Products />} />
+              <Route path='/productos/:category/:id' element={<Detail />} />
+              <Route path='/checkout' element={<Checkout />} />
+              <Route path='*' element={<h1>ERROR 404 - PAGINA NO ENCONTRADA</h1>} />
+            </Routes>
+          </header>
+          {/* <Modal>
         <h2>Modal de registro</h2>
         <form>
           <input type="text"></input>
           <button>Enviar</button>
         </form>
       </Modal> */}
-      </div>
-    </BrowserRouter>
+        </div>
+      </BrowserRouter>
+    </CartProdiver>
   );
 }
 

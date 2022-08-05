@@ -5,7 +5,7 @@ import { Link } from "react-router-dom"
 
 const ItemProduct = ({ data }) => {
 
-    const { title, image, price, stock, id } = data
+    const { title, category, image, price, stock, id } = data
 
 
 
@@ -13,11 +13,12 @@ const ItemProduct = ({ data }) => {
         <div>
             <div className="item-product">
                 <div className='card'>
-                    <Link to={`productos/${id}`}>
+                    <Link to={`productos/${category}/${id}`}>
                         <img src={`/assets/${image}`} alt="imagen productos"></img>
                         <p>{title}</p>
                     </Link>
                 </div>
+                <div className="category"><p>{category}</p></div>
                 <div className='price-stock'>
                     <span>$ {price}</span>
                     <p>Stock: {stock}</p>
