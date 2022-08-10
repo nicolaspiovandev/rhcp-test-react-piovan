@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './ItemCount.scss'
 
 
-const ItemCount = ({ stock }) => {
+const ItemCount = ({ stock, setQuantitySelected }) => {
     const [contador, setContador] = useState(1)
 
 
@@ -18,17 +18,21 @@ const ItemCount = ({ stock }) => {
         }
     }
 
+    const onAdd = () => {
+        setQuantitySelected(contador)
+    }
     
 
     return (
         <div>
+            <p>Stock: {stock}</p>
             <div className='countProd'>
                 <button onClick={removeNumber}>-</button>
                 <p>{contador}</p>
                 <button onClick={addNumber}>+</button>
             </div>
             <div className='btn-buy'>
-                <button>AGREGAR AL CARRITO</button>
+                <button onClick={onAdd}>AGREGAR AL CARRITO</button>
             </div>
         </div>
     )

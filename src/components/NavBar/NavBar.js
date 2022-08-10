@@ -4,8 +4,8 @@ import './NavBar.scss'
 
 const NavBar = () => {
     return (
-        <header className="row header">
-            <nav className="col navbar">
+        <div className="header">
+            <div className="navbar">
                 <div className='title'>
                     <h1>RHCP</h1>
                 </div>
@@ -17,8 +17,8 @@ const NavBar = () => {
                     <Link to=""><li><button>Contacto</button></li></Link>
                 </ul>
                 <CartWidget></CartWidget>
-            </nav>
-        </header>
+            </div>
+        </div>
     )
 }
 

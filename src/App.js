@@ -32,7 +32,7 @@ function App() {
               <Route path='/' element={<Home />} />
               <Route path='/productos' element={<Products />} />
               <Route path='/productos/:category/:id' element={<Detail />} />
-              <Route path='/checkout' element={<Checkout />} />
+              <Route path='/cart' element={<Checkout />} />
               <Route path='*' element={<h1>ERROR 404 - PAGINA NO ENCONTRADA</h1>} />
             </Routes>
           </header>
