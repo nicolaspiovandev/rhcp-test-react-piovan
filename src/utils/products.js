@@ -2,7 +2,7 @@ const products = [
     {
         id: 1,
         title: "LOGO RHCP",
-        category: "accesorios",
+        category: "Accesorios",
         price: 1500,
         image: 'logorhcp.png',
         stock: 5
@@ -10,7 +10,7 @@ const products = [
     {
         id: 2,
         title: "STICKER FLEA",
-        category: "accesorios",
+        category: "Accesorios",
         price: 150,
         image: 'flearhcp.png',
         stock: 13
@@ -18,7 +18,7 @@ const products = [
     {
         id: 3,
         title: "LOGO REDONDO RHCP",
-        category: "accesorios",
+        category: "Accesorios",
         price: 250,
         image: 'logo.png',
         stock: 15
@@ -26,7 +26,7 @@ const products = [
     {
         id: 4,
         title: "REMERA RHCP",
-        category: "ropa",
+        category: "Indumentaria",
         price: 3500,
         image: 'remera.png',
         stock: 20
@@ -34,7 +34,7 @@ const products = [
     {
         id: 5,
         title: "LLAVERO RHCP",
-        category: "accesorios",
+        category: "Accesorios",
         price: 750,
         image: 'llavero.png',
         stock: 300
@@ -42,7 +42,7 @@ const products = [
     {
         id: 6,
         title: "GORRA RHCP",
-        category: "ropa",
+        category: "Indumentaria",
         price: 1750,
         image: 'gorra.png',
         stock: 3

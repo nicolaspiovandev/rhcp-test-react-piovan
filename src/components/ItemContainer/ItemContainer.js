@@ -2,34 +2,37 @@ import { useState, useEffect } from "react"
 import './ItemContainer.scss'
 import ItemList from "../ItemList/ItemList"
 import products from "../../utils/products"
-import ItemDetailContainer from "../ItemDetailContainer/ItemDetailContainer"
+import { useParams } from "react-router-dom"
 
 
 const ItemContainer = ({ section }) => {
 
     const [listProducts, setListProducts] = useState([])
+    const {categoryId} = useParams()
 
-    const getProducts = new Promise((resolve, reject) => {
+    const getProducts = new Promise((resolve) => {
         setTimeout(() => {
             resolve(products)
-        }, 2000)
+        }, 1000)
     })
 
 
 
     useEffect(() => {
-        getProducts
-            .then((res) => { //Respuesta OK
-                //console.log("Productos: ", res)
+        if(categoryId){
+            getProducts
+           .then((res) => { //Respuesta OK
+                setListProducts(res.filter(products => products.category === categoryId)) //filtro por categoría
+            }) 
+        } else {
+            getProducts
+            .then((res) => {
                 setListProducts(res)
             })
-            .catch((error) => { //Falla la respuesta
-                console.log("La llamada fallo")
-            })
-            .finally(() => { //Siempre que termina por Ok o fallo
-                //setSpinner(false)
-            })
-    })
+        }
+            
+            
+    }, [categoryId])
 
     return (
         <div className="list-product">

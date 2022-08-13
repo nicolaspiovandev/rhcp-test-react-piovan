@@ -2,8 +2,11 @@
     display: flex;
     align-items: center;
     color:rgba(255, 0, 0, 0.671);
-    p {
+    a {
+        margin-left: 0.5rem;
         color:rgba(255, 0, 0, 0.671);
+        text-decoration: none;
+
 
             &:hover {
                 background-color: rgb(233, 127, 127);
@@ -11,3 +14,4 @@
     }
     
 }
+

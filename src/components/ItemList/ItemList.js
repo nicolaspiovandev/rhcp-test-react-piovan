@@ -3,7 +3,7 @@ import {CartContext} from "../../context/CartContext"
 import ItemProduct from "../ItemProduct/ItemProduct";
 
 const ItemList = ({dataProducts}) =>{
-    const {name, setName, handleClick} = useContext(CartContext)
+    const {name, setName, handleClick} = useContext(CartContext)  
 return(
     <>
         {dataProducts.map( (product) => {

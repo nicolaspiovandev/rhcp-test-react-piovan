@@ -27,6 +27,7 @@
     .navbar-items {
         display: flex;
         justify-content: flex-end;
+        align-items: center;
         list-style: none;
         margin: 30px;
 
@@ -45,4 +46,9 @@
         }
 
     }
+}
+
+.cart-widget{
+    display: flex;
+
 }

@@ -3,7 +3,6 @@ import NavBar from './components/NavBar/NavBar';
 /* import Modal from './components/Modal/Modal'; */
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Home from './pages/Home';
-import Products from './pages/Products';
 import Checkout from './pages/Checkout';
 import Detail from './pages/Detail';
 import CartProdiver from './context/CartContext';
@@ -30,8 +29,8 @@ function App() {
             </nav>
             <Routes>
               <Route path='/' element={<Home />} />
-              <Route path='/productos' element={<Products />} />
               <Route path='/productos/:category/:id' element={<Detail />} />
+              <Route path='/category/:categoryId' element={<Home />} />
               <Route path='/cart' element={<Checkout />} />
               <Route path='*' element={<h1>ERROR 404 - PAGINA NO ENCONTRADA</h1>} />
             </Routes>
