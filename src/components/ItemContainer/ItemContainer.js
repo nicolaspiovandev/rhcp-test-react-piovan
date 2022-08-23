@@ -3,13 +3,23 @@ import './ItemContainer.scss'
 import ItemList from "../ItemList/ItemList"
 import products from "../../utils/products"
 import { useParams } from "react-router-dom"
-
+/* import { collection, getDocs } from "firebase/firestore"
+import db from "../../firebaseConfig" */
 
 const ItemContainer = ({ section }) => {
 
     const [listProducts, setListProducts] = useState([])
     const {categoryId} = useParams()
 
+   /*  const getProducts = async () => {
+        const productCollection = collection(db, "productos")
+        const productSnapshot = await getDocs(productCollection)
+        const productList = productSnapshot.docs.map ( (doc) =>{
+            let product = doc.data()
+            product.id = doc.id
+            return product
+        })
+    } */
     const getProducts = new Promise((resolve) => {
         setTimeout(() => {
             resolve(products)

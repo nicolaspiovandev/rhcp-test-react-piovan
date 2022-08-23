@@ -1,6 +1,5 @@
 import './App.css';
 import NavBar from './components/NavBar/NavBar';
-/* import Modal from './components/Modal/Modal'; */
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Home from './pages/Home';
 import Cart from "./components/Cart/Cart"
@@ -35,13 +34,6 @@ function App() {
               <Route path='*' element={<h1>ERROR 404 - PAGINA NO ENCONTRADA</h1>} />
             </Routes>
           </header>
-          {/* <Modal>
-        <h2>Modal de registro</h2>
-        <form>
-          <input type="text"></input>
-          <button>Enviar</button>
-        </form>
-      </Modal> */}
         </div>
       </BrowserRouter>
     </CartProdiver>
