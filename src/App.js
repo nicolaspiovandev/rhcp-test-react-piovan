@@ -5,6 +5,8 @@ import Home from './pages/Home';
 import Cart from "./components/Cart/Cart"
 import Detail from './pages/Detail';
 import CartProdiver from './context/CartContext';
+import Sales from "./components/Sales/Sales";
+
 
 function App() {
 
@@ -31,6 +33,7 @@ function App() {
               <Route path='/productos/:category/:id' element={<Detail />} />
               <Route path='/category/:categoryId' element={<Home />} />
               <Route path='/cart' element={<Cart />} />
+              <Route path='/sales' element={<Sales />} />
               <Route path='*' element={<h1>ERROR 404 - PAGINA NO ENCONTRADA</h1>} />
             </Routes>
           </header>

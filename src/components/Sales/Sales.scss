@@ -1,3 +1,9 @@
+.form-container{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
 .btn-buy{
     display: flex;
     justify-content: center;
@@ -8,5 +14,6 @@
         background-color:black;
         color: #CCC;
         font-family:Verdana,Tahoma, sans-serif;
+        gap: 25px;
     }
 }
