@@ -9,7 +9,7 @@ import db from "../../firebaseConfig" */
 
 
 const ItemDetailContainer = () => {
-    
+
   const [productData, setProductData] = useState({})
   const { id } = useParams()
 
@@ -18,12 +18,12 @@ const ItemDetailContainer = () => {
   }, [])
 
   const filterById = () => {
-    products.some( (product) => {
+    products.some((product) => {
       if (product.id == id) {
         setProductData(product)
       }
     }
-  )
+    )
   }
 
   /* const getProduct = async () =>{
@@ -35,9 +35,9 @@ const ItemDetailContainer = () => {
   } */
 
   return (
-    <div>
+    <div className='item-detail-cont'>
       <h1>Detalle</h1>
-      <ItemDetail data={productData}/>
+      <ItemDetail data={productData} />
     </div>
   )
 }

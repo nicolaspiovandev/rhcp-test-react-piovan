@@ -63,17 +63,17 @@ const Sales = () => {
             {
                 confirm
                     ?
-                    <div className='end'>
-                        <h3>Que disfrute su compra!!!</h3>
+                    <div>
+                        <h3>¡Gracias por tu compra!</h3>
                         <p>Su codigo de seguimiento es:</p>
                         <b>{userId}</b>
                     </div>
                     :
-                    <div className='last-card'>
-                        <div className='selected-products'>
-                            <h3>Su compra:</h3>
-                            {cartProducts.map((product) => <p key={product.id} product={product.title}> {product.title}: {product.quantity} unidades ${product.price * product.quantity}</p>)}
-                            Total: ${totalPrice}
+                    <div>
+                        <div className='buy-detail'>
+                            <h3>Detalle de su compra:</h3>
+                            <strong>{cartProducts.map((product) => <p key={product.id} product={product.title}> {product.title}: {product.quantity} unidades ${product.price * product.quantity}</p>)}
+                                Total: ${totalPrice}</strong>
                         </div>
                         <p><b>Ingrese sus datos para finalizar:</b></p>
                         <div>
@@ -138,15 +138,10 @@ const Sales = () => {
                                 <div className='btn-buy'>
                                     <button type="submit">CONFIRMAR</button>
                                 </div>
-                            </form>
-                            <div className='order-buttons'>
-                                <div>
-                                </div>
                                 <div className='btn-buy'>
                                     <Link to="/" ><button>SEGUIR COMPRANDO</button></Link>
                                 </div>
-                            </div>
-
+                            </form>
                         </div>
                     </div>
             }
